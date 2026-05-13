@@ -1,0 +1,100 @@
+title: Ukraine Academic
+author: Loonify Pets
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    common:
+      filters:
+        - filters/academic-frontmatter.lua
+      lang: uk-UA
+      language:
+        toc-title-document: "ЗМІСТ"
+        toc-title-website: "На цій сторінці"
+        section-title-abstract: "Реферат"
+        section-title-appendices: "Додатки"
+        section-title-footnotes: "Примітки"
+        section-title-references: "Список використаних джерел"
+        title-block-author-single: "Автор"
+        title-block-author-plural: "Автори"
+        title-block-affiliation-single: "Афіліація"
+        title-block-affiliation-plural: "Афіліації"
+        title-block-published: "Опубліковано"
+        title-block-modified: "Оновлено"
+        title-block-keywords: "Ключові слова"
+        crossref-fig-title: "Рис."
+        crossref-tbl-title: "Таблиця"
+        crossref-lst-title: "Лістинг"
+        crossref-thm-title: "Теорема"
+        crossref-lem-title: "Лема"
+        crossref-cor-title: "Наслідок"
+        crossref-prp-title: "Твердження"
+        crossref-cnj-title: "Гіпотеза"
+        crossref-def-title: "Означення"
+        crossref-exm-title: "Приклад"
+        crossref-exr-title: "Вправа"
+        crossref-ch-prefix: "Розділ"
+        crossref-apx-prefix: "Додаток"
+        crossref-sec-prefix: "розділ"
+        crossref-eq-prefix: "формула"
+        crossref-lof-title: "Перелік рисунків"
+        crossref-lot-title: "Перелік таблиць"
+        crossref-lol-title: "Перелік лістингів"
+      toc: false
+      number-sections: true
+      csl: dstu-8302-2015.csl
+      nocite: "@*"
+      fig-width: 6.7
+      fig-height: 4
+      out-width: "100%"
+      fig-cap-location: bottom
+      tbl-cap-location: top
+    pdf:
+      pdf-engine: xelatex
+      documentclass: report
+      lang: uk
+      mainfont: "Times New Roman"
+      fontsize: 14pt
+      linestretch: 1.5
+      papersize: a4
+      geometry:
+        - left=30mm
+        - right=25.4mm
+        - top=25.4mm
+        - bottom=25.4mm
+      colorlinks: false
+      include-in-header:
+        text: |
+          \usepackage{caption}
+          \captionsetup[figure]{labelsep=space}
+          \captionsetup[table]{labelsep=space}
+          \usepackage{listings}
+          \lstset{basicstyle=\ttfamily\small, breaklines=true}
+          \usepackage{titlesec}
+          \titleformat{\chapter}[display]{\normalfont\Large\bfseries}{\chaptername\ \thechapter}{0pt}{\Large}
+          \titlespacing*{\chapter}{0pt}{0pt}{10pt}
+          \titlespacing*{\section}{0pt}{14pt}{6pt}
+          \titlespacing*{\subsection}{0pt}{12pt}{4pt}
+          \titlespacing*{\subsubsection}{0pt}{10pt}{4pt}
+          \AtBeginDocument{
+            \renewcommand{\chaptername}{РОЗДІЛ}
+            \let\maketitle\relax
+          }
+          \usepackage{fancyhdr}
+          \pagestyle{fancy}
+          \fancyhf{}
+          \fancyhead[R]{\thepage}
+          \renewcommand{\headrulewidth}{0pt}
+          \fancypagestyle{plain}{\fancyhf{}\fancyhead[R]{\thepage}\renewcommand{\headrulewidth}{0pt}}
+      template-partials:
+        - partials/before-body.tex
+      format-resources:
+        - dstu-8302-2015.csl
+    docx:
+      reference-doc: templates/reference.docx
+      page-width: 6.5
+      filters:
+        - filters/docx-table-fullwidth.lua
+      format-resources:
+        - templates/reference.docx
+        - dstu-8302-2015.csl

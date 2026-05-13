@@ -1,0 +1,67 @@
+\begin{titlepage}
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\centering
+
+{\bfseries\fontsize{14pt}{16.8pt}\selectfont
+$for(ukraine-academic.institution-lines)$$it$$sep$\par $endfor$\par}
+
+\vspace{0.8em}
+
+{\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.faculty$\par}
+{\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.department$\par}
+
+\vspace{5.2em}
+
+{\bfseries\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.work-type$\par}
+
+\vspace{2.1em}
+
+{\bfseries\fontsize{14pt}{16.8pt}\selectfont
+Тема «$for(ukraine-academic.title-lines)$$it$$sep$\par $endfor$»\par}
+
+\vspace{8.0em}
+
+\noindent\begin{minipage}[t]{0.72\textwidth}
+\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.student-label$$if(ukraine-academic.student-group)$ $ukraine-academic.student-group$$endif$
+\end{minipage}%
+\begin{minipage}[t]{0.28\textwidth}
+\raggedright\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.author-short$
+\end{minipage}
+
+\noindent\begin{minipage}[t]{0.72\textwidth}
+\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.supervisor-role$
+\end{minipage}%
+\begin{minipage}[t]{0.28\textwidth}
+\raggedright\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.supervisor-name$
+\end{minipage}
+
+\noindent\begin{minipage}[t]{0.72\textwidth}
+\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.reviewer-role$
+\end{minipage}%
+\begin{minipage}[t]{0.28\textwidth}
+\raggedright\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.reviewer-name$
+\end{minipage}
+
+\vspace{8.0em}
+
+\begin{flushleft}
+{\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.admitted-label$\par}
+
+\vspace{1.1em}
+
+\noindent\begin{minipage}[t]{0.30\textwidth}
+\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.department-head-label$
+\end{minipage}%
+\begin{minipage}[t]{0.70\textwidth}
+\raggedright
+{\fontsize{14pt}{16.8pt}\selectfont \rule{3.6cm}{0.4pt}\hspace{1.0em} $ukraine-academic.department-head-role$ $ukraine-academic.department-head-name$\par}
+\vspace{0.4em}
+\hspace*{1.15cm}{\fontsize{12pt}{14.4pt}\selectfont $ukraine-academic.signature-label$}
+\end{minipage}
+\end{flushleft}
+
+\vfill
+
+{\fontsize{14pt}{16.8pt}\selectfont $ukraine-academic.city$, $if(ukraine-academic.year)$$ukraine-academic.year$$else$$date$$endif$\par}
+\end{titlepage}
