@@ -2,8 +2,6 @@
 
 Ukrainian academic documents in PDF and DOCX with [Quarto](https://quarto.org/) following [DSTU formatting guidelines](https://github.com/myshevchuk/dstu-csl/blob/master/dstu-8302-2015.csl).
 
-<img src="./first-page.png" />
-
 Install into an existing project:
 
 ```bash
