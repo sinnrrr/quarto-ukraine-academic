@@ -1,11 +1,8 @@
 # quarto-ukraine-academic
 
-Quarto custom format for Ukrainian academic documents.
+Ukrainian academic documents in PDF and DOCX with [Quarto](https://quarto.org/) following [DSTU formatting guidelines](https://github.com/myshevchuk/dstu-csl/blob/master/dstu-8302-2015.csl).
 
-Current status:
-- reusable PDF and DOCX formatting rules
-- metadata-driven thesis front matter
-- intended to grow into multiple document profiles under one package
+<img src="./first-page.png" />
 
 Install into an existing project:
 
@@ -36,9 +33,9 @@ format:
 ukraine-academic:
   document-type: thesis
   institution-lines:
-    - "ПРИВАТНЕ АКЦІОНЕРНЕ ТОВАРИСТВО"
-    - "«ВИЩИЙ НАВЧАЛЬНИЙ ЗАКЛАД"
-    - "«МІЖРЕГІОНАЛЬНА АКАДЕМІЯ УПРАВЛІННЯ ПЕРСОНАЛОМ»»"
+    - "ПРИВАТНИЙ НАВЧАЛЬНИЙ ЗАКЛАД"
+    - "«УНІВЕРСИТЕТ"
+    - "ПРИКЛАДНИХ ДИВ І НЕСПОДІВАНИХ ВІДКРИТТІВ»"
   faculty: "Інститут"
   department: "Кафедра"
   work-type: "КВАЛІФІКАЦІЙНА РОБОТА БАКАЛАВРА"
